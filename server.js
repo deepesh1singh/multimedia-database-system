@@ -9,12 +9,20 @@ const { Op } = require('sequelize');
 // Sequelize imports
 const sequelize = require('./database');
 const User = require('./models/User');
-const Book = require('./models/Book');
+const Book = require('./models/Books');
 const Video = require('./models/Video');
 const Game = require('./models/Game');
 const Article = require('./models/Article');
 const Newspaper = require('./models/Newspaper');
 const Music = require('./models/music');
+const Painting = require('./models/Painting');
+
+// New enhanced models
+const Playlist = require('./models/Playlist');
+const PlaylistItem = require('./models/PlaylistItem');
+const Notification = require('./models/Notification');
+const Analytics = require('./models/Analytics');
+const Comment = require('./models/Comment');
 
 
 sequelize.sync()
@@ -1309,7 +1317,6 @@ function generateGamePage(data) {
 }
 
 // other require statements at the top of server.js
-const Painting = require('./models/Painting');
 
 // Add these routes to your server.js (but don't duplicate the sequelize declaration)
 // Painting upload route
